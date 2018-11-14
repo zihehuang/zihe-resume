@@ -1,0 +1,265 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{}{Zihe Huang}{ %\urlstyle{same}\url{http://debarghyadas.com} \\
+\href{mailto:zihehuang@gmail.com}{zihehuang@gmail.com} | 201-637-0210
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.25\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+
+\subsection{Rice University}
+\descript{BS in Electrical Engineering}
+\location{May 2015 | Houston, TX}
+Capstone Senior Design Project - Vibratory Extra-Sensory Transducer \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+\href{https://github.com/zihehuang}{\custombold{github.com/zihehuang}} \\
+\href{https://www.linkedin.com/in/zihe-huang-01897431/}{\custombold{linkedin.com/in/zihe-huang-01897431/}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Skills}
+\subsection{Programming}
+\location{Over 6000 lines:}
+Scala \textbullet{} Javascript \textbullet{} Python
+Matlab \\
+\location{Over 1000 lines:}
+HTML/CSS \textbullet{} Bash \textbullet{} Java\\
+\location{Familiar:}
+Solidity \textbullet{} C/C++ \textbullet{} Verilog\\
+PHP \textbullet{} \LaTeX\ 
+\sectionsep
+
+\subsection{Software}
+Linux \textbullet{} Git \textbullet{} VIM \textbullet{} NodeJS %\textbullet{} 
+Django \textbullet{} EagleCAD \textbullet{} KiCad
+Allegro PCB \textbullet{} FreeRTOS \\ %\textbullet{}
+Adobe Suite \textbullet{} Android \textbullet{} IntelliJ IDEA \textbullet{} JIRA
+\sectionsep
+
+\subsection{DevOps}
+EC2 \textbullet{} S3 \textbullet{} GrayLog \textbullet{} Elastic Beanstalk 
+\textbullet{} CloudFront \\ %\textbullet{} 
+Route 53 \textbullet{} Docker \textbullet{} ELK Stack
+\sectionsep
+
+\subsection{Hardware}
+BeagleBone \textbullet{} Raspberry Pi \textbullet{} CortexM3 \\
+MSP430\textbullet{} Arduino \textbullet{} MC9S08 \\
+Oscilloscope \textbullet{} Function Generator \textbullet{} Laser Cutter
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Coursework}
+
+% \subsection{Undergraduate}
+% Information Retrieval \\
+% Operating Systems \\
+% Artificial Intelligence + Practicum \\
+% Functional Programming \\
+% Computer Graphics + Practicum \\
+% {\footnotesize \textit{\textbf{(Research Asst. \& Teaching Asst) }}} \\
+% Unix Tools and Scripting \\
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards}
+2015 - Excellence in Senior Design \\
+2015 - 3rd in Rice Owl Open Student Startup Competition \\
+2014 - 2nd in Rice Undergraduate Elevator Pitch Competition
+%2010     & National & Comp. Soc. of India's National Programming Contest\\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.73\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\href{https://chronicled.com}{\runsubsection{Self-employed}}
+\descript{| Software Engineering Consultant }
+\location{Jun 2018 - Present | Shanghai, China}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Designing and implementing various blockchain software solutions for clients. Providing consulting services on best practices and architectures.
+\end{tightemize}
+\sectionsep
+
+\href{https://chronicled.com}{\runsubsection{Chronicled, Inc}}
+\descript{| Software Engineer }
+\location{Oct 2017 - Present | San Francisco, CA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Developing API backend as well as smart contracts for FDA-approved, blockchain-enabled IoT devices for supply chain and anti-counterfeiting applications.
+\item Integrating EPCIS-compliant transfer of custody logic with IoT tagged physical goods such as precious metal and pharmaceutical trading items, ensuring the goods are tracked and traced on the blockchain and in the real world.
+\end{tightemize}
+\sectionsep
+
+\href{https://topl.co}{\runsubsection{Topl, LLC}}
+\descript{| Co-Founder + \href{https://github.com/topl/project-bifrost}{Blockchain Engineer} }
+\location{Jan 2017 - Oct 2017 | Houston, TX}
+\begin{tightemize}
+\item Developed a commodity-backed cryptocurrency platform aimed to provide better access to capital for developing world commodity producers and better returns for investors using Scorex 2.
+\item Implemented and tested various types of blockchain transactions such as contract creations, permissioned access to certain contract methods, as well as state and network level synchronization and utilities such as bloom filter.
+\item Provided practical solutions to malicious incentives within the network by incorporating mandatory risk pooling and requiring collateral bootstrap to activate certain actors.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Topl, LLC}
+\descript{| Co-Founder + Distributed System Engineer }
+\location{Nov 2015 – Jan 2017 | Houston, TX}
+\begin{tightemize}
+\item Developed a permissioned blockchain payment and customer engagement platform powered by Go-ethereum and NodeJS REST API that is capable of handling 1800 requests/minute, as well as a novel mobile payment method using Bluetooth Beacon technologies.
+\item Integrated the REST API with a logging and analytics server powered by GrayLog that tracks API usage in real time.
+\item Created upgradeable solidity smart contracts on EVMs and an internal bookkeeping software that keeps track of company’s assets and liabilities. Maintained company AWS resources and performed DevOps duties.% such as zero-downtime deployment and updates for computing instances.
+\end{tightemize}
+\sectionsep
+
+\href{https://parkit.io}{\runsubsection{ParkIT}}
+\descript{| Software Engineer}
+\location{June 2015 - December 2015 | Houston, TX }
+\begin{tightemize}
+\item Developed a computer vision system that achieved over 99\% accuracy at recognizing parked vehicles in a parking lot.
+\item Improved the company's web app for parking operators at Texas Medical Center and Rice University, providing real-time parking lot occupancy and occupancy tracking for each day.
+\item Designed a wireless architecture that enabled microcomputers to remotely upload JSON data to AWS.
+\end{tightemize}
+\sectionsep
+
+% \href{http://www.adeaerospace.net/}{\runsubsection{ADE Aerospace Consulting}}
+% \descript{| Software Development Intern}
+% \location{June 2014 - August 2014 | Houston, TX }
+% \begin{tightemize}
+% \item Developed an Android App providing real-time 3D visualization of 3-axis accelerometer data
+% with JPCT-AE library.
+% \item Developed a CLI displaying distance and bearing from two GPS data streams.
+% \end{tightemize}
+% \sectionsep
+
+\href{https://www.youtube.com/watch?v=JTSGX6RYuiM}{\runsubsection{Vibratory Extra-Sensory Transducer}} \\
+\descript{Capstone Senior Design Project}
+\location{August 2014 - May 2015 | Houston, TX}
+\begin{tightemize}
+\item Designed the PCB, wire harness, and fabric enclosure for a wearable vest that converts audio into haptic patterns for the deaf. The vest won multiple awards at Rice and was presented at 2015 TED Conference by Dr. David Eagleman from Stanford University.
+%\item Designed a PCB capable of controlling up to 40 piezoelectric devices and the wire harness that connected all of these vibration modules and fabricated the vest enclosure.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Rice Univeristy Solar Car Team} 
+\descript{| Electrical Lead}
+\location{Sep 2013 - Mar 2015 | Houston, TX}
+\begin{tightemize}
+\item Designed and implemented a V/f-based brushless DC motor controller PCB.
+\item Customized a DRV8301 Field-Oriented PID controller board to process an external throttle signal.
+\item Led the electrical subteam and competed in annual Shell Eco-Marathons.
+\end{tightemize}
+\sectionsep
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Societies} 
+% \begin{tabular}{rll}
+% 2014 	& top 12\%ile    & Tau Beta Pi Engineering Honor Society\\
+% \end{tabular}
+% \sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
